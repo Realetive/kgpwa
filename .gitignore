@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+
+# Cache
+.vite/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# PWA generated
+dev-dist/
+
+# Beads issues (database)
+.beads/**/*.db
+.beads/**/*.db-shm
+.beads/**/*.db-wal
+
+# Misc
+*.tgz
+
+# pnpm
+.pnpm-store/

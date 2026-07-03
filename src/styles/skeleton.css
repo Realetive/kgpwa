@@ -1,0 +1,95 @@
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: var(--color-surface-2);
+  }
+}
+
+.skeleton--canvas {
+  flex: 1;
+  min-height: 400px;
+  border-radius: var(--radius-md);
+}
+
+.skeleton--panel {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.skeleton--panel .skeleton-line {
+  height: 1em;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton--panel .skeleton-line {
+    animation: none;
+    background: var(--color-surface-2);
+  }
+}
+
+.skeleton--panel .skeleton-line:nth-child(1) { width: 60%; }
+.skeleton--panel .skeleton-line:nth-child(2) { width: 90%; }
+.skeleton--panel .skeleton-line:nth-child(3) { width: 45%; }
+.skeleton--panel .skeleton-line:nth-child(4) { width: 75%; }
+.skeleton--panel .skeleton-line:nth-child(5) { width: 30%; }
+
+.skeleton--node-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+}
+
+.skeleton--node-list .skeleton-node {
+  height: 2.5em;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-surface) 25%,
+    var(--color-surface-2) 50%,
+    var(--color-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton--node-list .skeleton-node {
+    animation: none;
+    background: var(--color-surface-2);
+  }
+}
